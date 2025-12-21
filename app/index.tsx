@@ -14,15 +14,18 @@ export default function Index() {
     if (counter>0){setCounter(counter - 1)};
   }
   function reset(){
-    setCounter(0)
+    setCounter(0) 
   }
+
+
 
   return (
     <View style={styles.container}>
       <Button title="Increase" onPress={increase} />
-      <Text style={styles.text}>{counter}</Text>
+      <Text style={[styles.text,{color: counter < 5 ? "green" : "red" }]}>{counter}</Text>
      < Button title="Reset"           onPress={reset}/>
       {/* 2️⃣ Add onPress and connect it to the decrease function */}
+      {counter > 7 && <Text>HEY HEY Too many clicks!</Text>} 
       <Button title="Decrease"   onPress={dicrease} />
     </View>
   );
