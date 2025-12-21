@@ -10,6 +10,9 @@ export default function Index() {
 
   // 1️⃣ TODO: Create a function named decrease
   // It should reduce the counter by 1
+  function dicrease(){
+    setCounter(counter - 1);
+  }
 
   return (
     <View style={styles.container}>
@@ -17,7 +20,7 @@ export default function Index() {
       <Text style={styles.text}>{counter}</Text>
 
       {/* 2️⃣ Add onPress and connect it to the decrease function */}
-      <Button title="Decrease" />
+      <Button title="Decrease"   onPress={dicrease} />
     </View>
   );
 }
